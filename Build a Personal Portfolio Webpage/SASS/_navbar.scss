@@ -1,0 +1,68 @@
+.nav-bar {
+  background-color: $nav-color;
+  width: 100%;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  z-index: 1000;
+
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: $main-text;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  li {
+    padding: 0 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 350;
+  }
+
+  a {
+    color: $main-text;
+    text-decoration: none;
+  }
+
+  // Mobile View: Dropdown Menu
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: $nav-height;
+      left: 0;
+      width: 100%;
+      background-color: $nav-color;
+      padding: 10px 0;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    ul.active {
+      display: flex;
+    }
+
+    li {
+      padding: 15px 0;
+    }
+  }
+}

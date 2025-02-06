@@ -1,0 +1,35 @@
+.contact {
+  width: 100%;
+  height: 60vh;
+  background: $main-linear-gradient;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-size: 2.5rem;
+    color: $main-text;
+  }
+  p {
+    font-size: 0.9rem;
+    font-weight: 100;
+    font-style: italic;
+    color: $main-text;
+    margin: 10px auto 20px auto;
+  }
+  .contact-link {
+    margin-top: 2rem;
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      color: $main-text;
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(8px);
+      }
+    }
+  }
+}

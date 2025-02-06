@@ -1,0 +1,20 @@
+.welcome-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $main-linear-gradient;
+
+  h1 {
+    font-size: 4rem;
+    color: $main-text;
+  }
+
+  p {
+    font-size: 2rem;
+    color: $main-red;
+    font-weight: lighter;
+  }
+}

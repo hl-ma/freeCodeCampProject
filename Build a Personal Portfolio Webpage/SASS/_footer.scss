@@ -1,0 +1,19 @@
+footer {
+  color: $main-text;
+  border-top: 3px solid $main-red;
+  height: 8vh;
+  width: 100%;
+  background: $main-linear-gradient;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  align-content: center;
+  justify-items: center;
+
+  p {
+    padding: 0 1rem;
+
+    a {
+      color: $main-text;
+    }
+  }
+}

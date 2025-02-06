@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #eee;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #3a3d40;
+}
+
+.nav-bar {
+  background-color: darkred;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  z-index: 1000;
+}
+.nav-bar .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #eee;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.nav-bar li {
+  padding: 0 15px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 350;
+}
+.nav-bar a {
+  color: #eee;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .nav-bar .menu-toggle {
+    display: block;
+  }
+  .nav-bar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: darkred;
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-bar ul.active {
+    display: flex;
+  }
+  .nav-bar li {
+    padding: 15px 0;
+  }
+}
+
+.welcome-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+.welcome-section h1 {
+  font-size: 4rem;
+  color: #eee;
+}
+.welcome-section p {
+  font-size: 2rem;
+  color: rgb(194, 0, 0);
+  font-weight: lighter;
+}
+
+.projects {
+  background: rgb(84, 94, 134);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.projects h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  border-bottom: 2px solid #eee;
+  max-width: 640px;
+  margin: 0 auto 3rem auto;
+  overflow-wrap: normal;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 3rem;
+}
+.projects-grid a {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  background: #3a3d40;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.projects-grid a img {
+  width: 100%;
+  height: calc(100% - 2.8rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects-grid a p {
+  font-size: 1 rem;
+  padding: 1rem 0.5rem;
+}
+.projects-grid a p .code {
+  color: #3a3d40;
+  transition: color 0.3s ease-in-out;
+}
+.projects-grid a:hover .code {
+  color: darkorange;
+}
+
+.btn-show-all {
+  max-width: 150px;
+  font-size: 1rem;
+  color: #eee;
+  background: #3a3d40;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.btn-show-all i {
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.btn-show-all:hover i {
+  transform: translateX(5px);
+}
+.btn-show-all:hover {
+  background: rgb(194, 0, 0);
+  transform: scale(1.1);
+}
+
+.contact {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact h1 {
+  font-size: 2.5rem;
+  color: #eee;
+}
+.contact p {
+  font-size: 0.9rem;
+  font-weight: 100;
+  font-style: italic;
+  color: #eee;
+  margin: 10px auto 20px auto;
+}
+.contact .contact-link {
+  margin-top: 2rem;
+}
+.contact .contact-link .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: #eee;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.contact .contact-link .btn:hover {
+  transform: translateY(8px);
+}
+
+footer {
+  color: #eee;
+  border-top: 3px solid rgb(194, 0, 0);
+  height: 8vh;
+  width: 100%;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  align-content: center;
+  justify-items: center;
+}
+footer p {
+  padding: 0 1rem;
+}
+footer p a {
+  color: #eee;
+}/*# sourceMappingURL=styles.css.map */
