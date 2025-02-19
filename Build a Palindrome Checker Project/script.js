@@ -16,7 +16,7 @@ const checkPalindrome = (e) => {
     if (e.type === "click" || e.key === "Enter") {
         const input = userInput.value;
 
-        if (input === '')
+        if (input.trim() === '')
             return alert("Please input a value");
 
         const result = `${input} ${isPalindrome(input) ? "is" : "is not"} a palindrome.`;
