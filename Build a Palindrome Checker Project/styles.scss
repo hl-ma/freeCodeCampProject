@@ -1,0 +1,104 @@
+@mixin bottomMargin() {
+  margin-bottom: 30px;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include flexCenter();
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #0a0a23;
+  color: #ffffff;
+
+  .freecodecamp-logo {
+    @include bottomMargin();
+    height: 30px;
+  }
+
+  h1 {
+    @include bottomMargin();
+    font-size: 2.5rem;
+  }
+
+  .main-container {
+    @include bottomMargin();
+    @include flexCenter();
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 6px 6px #002ead;
+    padding: 20px 40px;
+    border-radius: 20px;
+    width: min(100vw, 450px);
+    min-height: 100px;
+
+    label {
+      @include bottomMargin();
+      color: black;
+    }
+
+    .input-container {
+      @include bottomMargin();
+
+      #text-input {
+        height: 35px;
+        width: 250px;
+        border: none;
+        border-bottom: 2px solid #002ead;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      #check-btn {
+        width: 90px;
+        border: none;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #002ead;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #5a01a7;
+        }
+      }
+    }
+
+    .result {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      color: black;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+  .definition {
+    display: flex;
+    flex-direction: row;
+    background-color: #00471b;
+    padding: 20px 30px;
+    border-radius: 20px;
+    width: min(100vw, 450px);
+    min-height: 100px;
+    font-size: 1.2rem;
+
+    #lightBulb {
+      margin-right: 10px;
+      font-size: 1.4rem;
+    }
+  }
+}
