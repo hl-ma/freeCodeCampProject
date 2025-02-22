@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #0a0a23;
+  color: #ffffff;
+}
+body .freecodecamp-logo {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  height: 30px;
+}
+body h1 {
+  margin-bottom: 50px;
+  max-width: 400px;
+  text-align: center;
+  font-family: "Castoro Titling", cursive;
+  font-size: 2.5rem;
+}
+body .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #f5f6f7;
+  background-color: #3b3b4f;
+  border: 2px solid #f5f6f7;
+  padding: 20px 40px;
+  width: min(100vw, 500px);
+  min-height: 100px;
+}
+body .input-container label {
+  margin-top: 15px;
+  color: #f5f6f7;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+body .input-container input {
+  display: block;
+  font-size: 2.5rem;
+  width: 100%;
+  height: 60px;
+  padding: 6px 12px;
+  margin: 25px 0;
+  line-height: 1.4;
+  color: white;
+  background-color: #0a0a23;
+  border: 1px solid #f5f6f7;
+}
+body .input-container #convert-btn {
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+  padding: 10px 16px;
+  font-size: 1.4rem;
+  width: 100%;
+}
+body .result {
+  color: #ffffff;
+  background-color: #3b3b4f;
+  border: 3px solid #f5f6f7;
+  font-size: 2.5rem;
+  width: 90%;
+  max-width: 500px;
+  min-height: 55px;
+  margin-top: 25px;
+  padding: 15px;
+  overflow-wrap: break-word;
+  text-align: center;
+  font-size: 1.5rem;
+}
+body .result.hidden {
+  display: none;
+}
+body .result.error {
+  border: 3px solid #a94442;
+  color: #850000;
+  background: #ffadad;
+}/*# sourceMappingURL=styles.css.map */
