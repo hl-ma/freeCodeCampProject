@@ -1,0 +1,100 @@
+$primary-background-color: #3b3b4f;
+$secondary-background-color: #fff;
+$primary-color: #0a0a23;
+$secondary-color: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bottom-margin {
+  margin-bottom: 45px;
+}
+
+body {
+  background-color: $primary-background-color;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $primary-color;
+}
+
+main {
+  @include flexCenter;
+  flex-direction: column;
+  padding: 40px;
+
+  .freecodecamp-logo {
+    max-width: 300px;
+    @include bottom-margin;
+  }
+
+  .title {
+    @include bottom-margin;
+    color: $secondary-color;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .phone-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    background-color: black;
+    border-radius: 20px;
+    border: 15px solid $primary-color;
+
+    #phone-camera {
+      background-color: $secondary-color;
+      border-radius: 50%;
+      @include flexCenter;
+      margin: 5px auto 15px;
+      height: 10px;
+      width: 10px;
+    }
+
+    #phone-screen {
+      margin-bottom: 5px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      background-color: $secondary-color;
+
+      label {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      #user-input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 2px solid $primary-color;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      #results-div {
+        height: 300px;
+      }
+    }
+
+    #phone-buttons {
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        padding: 5px 20px;
+        border: 2px solid $primary-color;
+        background-color: $secondary-color;
+        font-size: 1.2rem;
+        max-width: 150px;
+      }
+    }
+  }
+}
