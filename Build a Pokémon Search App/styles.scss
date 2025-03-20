@@ -1,0 +1,194 @@
+$light-gray: #dfdfe2;
+$dark-blue: #0a0a23;
+$light-background: #f5f6f7;
+$purple-background: #7f21ab;
+$types: (
+  normal: #b7b7aa,
+  fire: #ff6f52,
+  water: #42a1ff,
+  electric: #fecc33,
+  grass: #78cc55,
+  ice: #66ccfe,
+  fighting: #d3887e,
+  poison: #c68bb7,
+  ground: #dfba52,
+  flying: #8899ff,
+  psychic: #ff66a3,
+  bug: #aabb23,
+  rock: #baaa66,
+  ghost: #9995d0,
+  dragon: #9e93f1,
+  dark: #b59682,
+  steel: #abaabb,
+  fairy: #ed99ed,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  height: 100vh;
+  background-color: $dark-blue;
+
+  main {
+    @include flex-center;
+    flex-direction: column;
+  }
+
+  .freecodecamp-logo {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: $light-gray;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .main-container {
+    max-width: 450px;
+    margin: 25px 0;
+    background-color: $light-background;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px 0px rgba(223, 220, 220, 0.75);
+
+    .search-form,
+    .output {
+      @include flex-center;
+    }
+
+    .search-form {
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0px;
+      width: 100%;
+
+      label {
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      #search-input {
+        height: 40px;
+        width: 230px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1rem;
+      }
+      #search-button {
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        text-align: center;
+        background-color: $purple-background;
+        color: $light-gray;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+
+    .output {
+      flex-direction: column;
+
+      .top-container,
+      .bottom-container {
+        min-height: 325px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .top-container {
+        margin-bottom: 10px;
+        background-color: #f0f1f7;
+        padding: 5px;
+        width: 95%;
+
+        .name-and-id {
+          font-size: 1.3rem;
+          margin-bottom: 10px;
+        }
+
+        .size {
+          font-size: 1.1rem;
+        }
+
+        .image {
+          @include flex-center;
+          flex-grow: 1;
+
+          #sprite {
+            width: 200px;
+          }
+        }
+
+        #types {
+          min-height: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px;
+
+          .type {
+            @each $type, $color in $types {
+              &.#{$type} {
+                background-color: $color;
+              }
+            }
+            padding: 5px;
+            font-size: 0.7rem;
+            text-align: center;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .bottom-container {
+        @include flex-center;
+        width: 97%;
+
+        table {
+          border-collapse: separate;
+          border-spacing: 10px 5px;
+          width: 100%;
+          color: $light-gray;
+          font-size: 1.2rem;
+
+          tr {
+            td,
+            th {
+              text-align: center;
+              padding: 8px;
+              background-color: $purple-background;
+            }
+            th:first-child,
+            td:first-child {
+              width: 65%;
+            }
+
+            th:last-child,
+            td:last-child {
+              width: 35%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
